@@ -132,6 +132,9 @@ def sanitize_cpu_name(cpu_name):
     if "@" in cpu_name:
         cpu_name = cpu_name.split("@")[0]
 
+    # Sustituir separadores problemáticos por espacio
+    cpu_name = re.sub(r"[\/\\:*?\"<>|]", " ", cpu_name)
+
     # Limpiar espacios múltiples
     cpu_name = " ".join(cpu_name.split())
 
