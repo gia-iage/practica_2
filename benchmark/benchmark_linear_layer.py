@@ -3,6 +3,7 @@ import argparse
 import time
 import statistics
 import csv
+import re
 
 # ==================================================
 # Parámetros globales
